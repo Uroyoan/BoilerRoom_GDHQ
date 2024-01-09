@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 308989385}
   - component: {fileID: 308989384}
   - component: {fileID: 308989383}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Ray Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2300,7 +2300,7 @@ GameObject:
   - component: {fileID: 469325237}
   - component: {fileID: 469325236}
   - component: {fileID: 469325235}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3590,7 +3590,7 @@ GameObject:
   - component: {fileID: 689019525}
   - component: {fileID: 689019523}
   - component: {fileID: 689019526}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Left Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4654,7 +4654,7 @@ GameObject:
   - component: {fileID: 804278184}
   - component: {fileID: 804278182}
   - component: {fileID: 804278181}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -12364,7 +12364,7 @@ GameObject:
   - component: {fileID: 1272410995}
   - component: {fileID: 1272410993}
   - component: {fileID: 1272410996}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Right Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12882,7 +12882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1301901260}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Camera Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13130,7 +13130,7 @@ GameObject:
   - component: {fileID: 1382400009}
   - component: {fileID: 1382400011}
   - component: {fileID: 1382400010}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Direct Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15055,7 +15055,7 @@ GameObject:
   - component: {fileID: 1911571160}
   - component: {fileID: 1911571162}
   - component: {fileID: 1911571161}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Direct Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15392,7 +15392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2014577674}
   - component: {fileID: 2014577673}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: XR Interaction Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15526,7 +15526,7 @@ GameObject:
   - component: {fileID: 2077511736}
   - component: {fileID: 2077511735}
   - component: {fileID: 2077511734}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Ray Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
