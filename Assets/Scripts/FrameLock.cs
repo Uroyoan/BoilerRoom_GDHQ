@@ -6,65 +6,65 @@ using UnityEngine.Events;
 
 public class FrameLock : MonoBehaviour
 {
-    [SerializeField] int[] _lockCode = new int[3] { 1, 2, 3 };
-    int[] _enteredCode = { 0, 0, 0 };
+  [SerializeField] int[] _lockCode = new int[3] { 1, 2, 3 };
+  int[] _enteredCode = { 0, 0, 0 };
 
-    private XRSocketInteractor[] _interactors;
-    [SerializeField] UnityEvent _onCheck;
+  private XRSocketInteractor[] _interactors;
+  [SerializeField] UnityEvent _onCheck;
 
-    private void Start()
+  private void Start()
+  {
+    _interactors = GetComponentsInChildren<XRSocketInteractor>();
+  }
+
+  public void EnterSocket0()
+  {
+    var interactables = _interactors[0].interactablesSelected;
+    FrameID id = interactables[0]?.transform.GetComponent<FrameID>();
+    if (id != null)
     {
-        _interactors = GetComponentsInChildren<XRSocketInteractor>();
+      _enteredCode[0] = id.GetID();
+      if (CheckCode())
+        _onCheck.Invoke();
     }
+  }
 
-    public void EnterSocket0()
+  public void EnterSocket1()
+  {
+    var interactables = _interactors[1].interactablesSelected;
+    FrameID id = interactables[0]?.transform.GetComponent<FrameID>();
+    if (id != null)
     {
-        var interactables = _interactors[0].interactablesSelected;
-        FrameID id = interactables[0]?.transform.GetComponent<FrameID>();
-        if (id != null)
-        {
-            _enteredCode[0] = id.GetID();
-            if (CheckCode())
-                _onCheck.Invoke();
-        }
+      _enteredCode[1] = id.GetID();
+      if (CheckCode())
+        _onCheck.Invoke();
     }
+  }
 
-    public void EnterSocket1()
+  public void EnterSocket2()
+  {
+    var interactables = _interactors[2].interactablesSelected;
+    FrameID id = interactables[0]?.transform.GetComponent<FrameID>();
+    if (id != null)
     {
-        var interactables = _interactors[1].interactablesSelected;
-        FrameID id = interactables[0]?.transform.GetComponent<FrameID>();
-        if (id != null)
-        {
-            _enteredCode[1] = id.GetID();
-            if (CheckCode())
-                _onCheck.Invoke();
-        }
+      _enteredCode[2] = id.GetID();
+      if (CheckCode())
+        _onCheck.Invoke();
     }
+  }
 
-    public void EnterSocket2()
+
+  private bool CheckCode()
+  {
+    if (_enteredCode.Length == _lockCode.Length)
     {
-        var interactables = _interactors[2].interactablesSelected;
-        FrameID id = interactables[0]?.transform.GetComponent<FrameID>();
-        if (id != null)
-        {
-            _enteredCode[2] = id.GetID();
-            if (CheckCode())
-                _onCheck.Invoke();
-        }
+      for (int i = 0; i < _enteredCode.Length; i++)
+      {
+        if (_enteredCode[i] != _lockCode[i])
+          return false;
+      }
+      return true;
     }
-
-
-    private bool CheckCode()
-    {
-        if (_enteredCode.Length == _lockCode.Length)
-        {
-            for(int i = 0;  i < _enteredCode.Length; i++)
-            {
-                if (_enteredCode[i] != _lockCode[i])
-                    return false;
-            }
-            return true;
-        }
-        else return false;
-    }
+    else return false;
+  }
 }

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LayerNames:
   - Default
-  - 
-  - 
-  - 
+  - frame01
+  - frame02
+  - frame03
   - 
   - 
   - 
